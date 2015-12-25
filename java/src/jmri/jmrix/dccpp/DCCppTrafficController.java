@@ -285,7 +285,7 @@ public abstract class DCCppTrafficController extends AbstractMRTrafficController
 	}
 	
 	// Now, suck in the rest of the message...
-        for (int i = 0; i < DCCppConstants.MAX_MESSAGE_SIZE; i++) {
+        for (int i = 0; i < DCCppConstants.MAX_REPLY_SIZE; i++) {
             char1 = readByteProtected(istream);
 	    if (char1 == '>') {
 		log.debug("msg found > ");

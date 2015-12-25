@@ -89,10 +89,12 @@ public class DCCppPowerManager implements PowerManager, DCCppListener {
             log.debug("Message recieved: " + m.toString());
         }
 	if (m.getElement(0) == DCCppConstants.POWER_REPLY) {
-	    if (m.getElement(1) == '1') {
+            // The reply is <p 0> getElement returns the array back to a string so 1 is the space 2 is the value. 
+            //Not sure why we are not just doing m[1] but for now changing to correct position in the string
+            if (m.getElement(2) == '1') {
 		power = ON;
 		firePropertyChange("Power", null, null);
-	    } else if (m.getElement(1) == '0') {
+	    } else if (m.getElement(2) == '0') {
 		power = OFF;
 		firePropertyChange("Power", null, null);
 	    } else {

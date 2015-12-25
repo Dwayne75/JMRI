@@ -38,6 +38,7 @@ public final class DCCppConstants {
     // Command Station Types
     public final static int DCCPP_UNO_1_0 = 1;
     public final static int DCCPP_ARDUINO_1_1 = 2;
+    
     public final static String CommandStationNames[] = {
 	"DCCPP Arduino Uno v1.0",
 	"DCCPP Arduino V1.1",
@@ -141,6 +142,8 @@ public final class DCCppConstants {
     public final static String OUTPUT_REPLY_REGEX = "\\s*Z\\s*(\\d+)\\s+(\\d+)\\s*";
     public final static String MADC_FAIL_REPLY_REGEX = "\\s*X\\s*";
     public final static String MADC_SUCCESS_REPLY_REGEX = "\\s*O\\s*";
+ // Current dcc++ build 
+// <iDCC++ BASE STATION FOR ARDUINO MEGA / ARDUINO MOTOR SHIELD: BUILD Dec 22 2015 22:58:46><N0: SERIAL>
 //    public final static String STATUS_REPLY_REGEX = "i(DCC\\+\\+.*): BUILD (.*)";
     public final static String STATUS_REPLY_REGEX = "i(DCC\\+\\+[^:]*): BUILD (.*)";
     public final static String FREE_MEMORY_REPLY_REGEX = "\\s*f\\s*(\\d+)\\s*";
